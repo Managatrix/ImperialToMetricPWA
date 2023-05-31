@@ -1,0 +1,50 @@
+@page "/"
+
+<PageTitle>Convertor</PageTitle>
+
+<MudText Class="mb-5" Typo="Typo.h3">Convertor</MudText>
+
+@* <div class="d-flex flex-grow-1 gap-4">
+<MudGrid Spacing="10">
+<MudItem xs="3">
+<MudNumericField HideSpinButtons="true" @bind-Value="feet" Label="Feet" Variant="Variant.Outlined" />
+</MudItem>
+<MudItem xs="3">
+<MudNumericField HideSpinButtons="true" @bind-Value="meters" Label="Meters" Variant="Variant.Outlined" />
+</MudItem>
+</MudGrid>
+</div> *@
+
+<div class="d-flex flex-grow-1 gap-4">
+
+    <MudNumericField HideSpinButtons="true" @bind-Value="feet" TextChanged="convertToMeters" Immediate="false"
+        Label="Feet" Variant="Variant.Outlined" Min="0.0" Format="F2" />
+
+    <MudNumericField HideSpinButtons="true" @bind-Value="meters" TextChanged="convertToFeet" Immediate="false"
+        Label="Meters" Variant="Variant.Outlined" Min="0.0" Format="F2" />
+
+    @* <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="convertValue">Convert</MudButton> *@
+</div>
+
+@code {
+    double? feet;
+    double? meters;
+
+    private void convertToMeters()
+    {
+        if (feet != null)
+        {
+            meters = feet / 3.28084;
+        }
+        Console.WriteLine(feet + " feet converted to " + meters + " meters.");
+    }
+
+    private void convertToFeet()
+    {
+        if (meters != null)
+        {
+            feet = meters * 3.28084;
+        }
+        Console.WriteLine(feet + " meters converted to " + meters + " feet.");
+    }
+}
