@@ -2,7 +2,7 @@
   "name": "ImperialToMetricPWA",
   "short_name": "ImpToMet",
   "start_url": "/",
-  "display": "standalone",
+  "display": "browser",
   "background_color": "#ffffff",
   "theme_color": "#03173d",
   "prefer_related_applications": false,
