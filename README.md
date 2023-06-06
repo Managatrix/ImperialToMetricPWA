@@ -1,5 +1,6 @@
 # Imperial To Metric PWA
-A little project to get my hands on creating and publishing a simple Blazor WASM app. The app is aimed towards mobile devices, but as a Progressive Web App, can be used on any device with a compatible browser.
+A little project to get my hands on creating and publishing a simple Blazor WASM app. The app is aimed towards mobile devices, but as a Progressive Web App, can be used on any device with a compatible browser.\
+The app is publised on Github Pages [here](https://managatrix.github.io/ImperialToMetricPWA/). It works and can be installed (through the browser-integrated install button) on any device. However, the installed PWA doesn't work on Android devices.
 
 ## Functionalities
 Convert Imperial units to Metric and the other way around. Conversions include:
